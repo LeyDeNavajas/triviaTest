@@ -1,0 +1,94 @@
+/*yo quiero unas paletas de color cute https://colorhunt.co/palette/d3e4cd99a799f2ddc1e2c2b9 de aqui las sacamos*/
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap");
+
+body {
+  font-size: 20px;
+  font-family: "Outfit", sans-serif;
+  color: #2a2b2e;
+  background-color: FCF8E8;
+}
+
+.error {
+  color: rgb(223, 120, 97);
+}
+
+.rounded {
+  border-radius: 4px;
+}
+.container {
+  box-sizing: border-box;
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  padding: 50px;
+  text-align: center;
+  border-radius: 4rem;
+  background: linear-gradient(
+    to bottom,
+    rgb(212, 226, 212),
+    rgb(252, 248, 232) 80%
+  );
+}
+
+.respuestas__layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.botones,
+.botones-name,
+.botones-tema {
+  background-color: rgb(236, 179, 144);
+  border: none;
+  color: #2a2b2e;
+  font-size: px;
+  height: 40px;
+  border-radius: 0.2em;
+}
+
+.formulario {
+  border: none;
+  height: 25px;
+  font-size: 20px;
+}
+.botones:hover,
+.botones-name:hover,
+.botones-tema:hover {
+  background-color: rgb(223, 120, 97);
+}
+
+input {
+  align-items: center;
+  display: block;
+  margin: 25px;
+  width: 350px;
+  padding: 4px 2px;
+  margin-bottom: 50px;
+  box-shadow: 3px #2a2b2e;
+}
+input:focus {
+  outline: none;
+}
+.seguir {
+  background-color: rgb(212, 226, 212);
+  border: none;
+  color: #2a2b2e;
+  font-size: 20px;
+  border-radius: 0.2em;
+  height: 50px;
+  width: 200px;
+}
+.seguir:hover {
+  background-color: rgb(153, 175, 153);
+}
+
+.hidden {
+  display: none;
+}
+
+h2 {
+  background-color: rgb(252, 248, 232);
+  border-radius: 00.2em;
+}

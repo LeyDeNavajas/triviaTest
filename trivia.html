@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="normalize.css" rel="stylesheet" type="text/css" />
+    <link href="trivia.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!--pantalla principal-->
+
+    <div class="container">
+      <!--el container permite guardar todo en una cajita-->
+
+      <div id="pantallaPrincipal">
+        <h2>¿Estás lista para jugar?</h2>
+
+        <!--boton para guardar nombre-->
+
+        <label for="nombreJugador">
+          <h4>Escribe tu nombre</h4>
+        </label>
+
+        <input type="text" id="nombreJugador" class="formulario" />
+
+        <!--aqui guardamos el nombre-->
+
+        <p id="errorNombre" class="error hidden">
+          Tu nombre no puede estar vacio
+        </p>
+        <input
+          type="button"
+          onclick="guardarNombre()"
+          value="Guardar"
+          class="botones"
+        />
+      </div>
+
+      <!--pantalla temas-->
+
+      <div class="hidden" id="pantallaTemas">
+        <!--Aqui esta el id de "nombre"-->
+
+        <h2 id="nombre"></h2>
+        <h4>opciones juegos:</h4>
+
+        <input
+          type="button"
+          id="temaUno"
+          class="botones-tema"
+          value="Tema numero uno"
+        />
+
+        <input
+          type="button"
+          id="temaDos"
+          class="botones-tema"
+          value="Tema numero dos"
+        />
+      </div>
+
+      <!--aqui esta nuestro tiempo-->
+
+      <div id="tiempo"></div>
+
+      <!--pregunta uno, tema uno-->
+
+      <div class="hidden respuestas__layout containe" id="pantallaPreguntaUno">
+        <div>
+          <h2 id="preguntaUno">Cual es la primera pelicula de Wes Anderson?</h2>
+          <p>tema numero uno</p>
+        </div>
+
+        <div class="respuestas" id="respuestasTemaNumeroUno">
+          <input
+            type="button"
+            id="r1p1"
+            class="botones tema1"
+            value="Bottle Rocket"
+            data-puntos="1"
+          />
+          <input
+            type="button"
+            id="r2p1"
+            class="botones tema1"
+            value="Fantastic Mr. Fox"
+            data-puntos="0"
+          />
+          <input
+            type="button"
+            id="r3p1"
+            class="botones tema1"
+            value="Isla de Perros"
+            data-puntos="0"
+          />
+        </div>
+      </div>
+      <!-- pregunta dos, tema uno-->
+
+      <div class="hidden respuestas__layout" id="pantallaPreguntaDos">
+        <div>
+          <h2 id="preguntaDos">Que es lo siguiente?</h2>
+          <p>tema numero uno</p>
+        </div>
+
+        <div class="respuestas" id="respuestasTemaNumeroUno">
+          <input
+            type="button"
+            id="r1p2"
+            class="botones tema1"
+            value="hola"
+            data-puntos="1"
+          />
+          <input
+            type="button"
+            id="r2p2"
+            class="botones tema1"
+            value="que"
+            data-puntos="1"
+          />
+          <input
+            type="button"
+            id="r3p2"
+            class="botones tema1"
+            value="tal"
+            data-puntos="1"
+          />
+        </div>
+      </div>
+      <!--pregunta tres, tema uno -->
+      <div class="hidden respuestas__layout" id="pantallaPreguntaTres">
+        <div>
+          <h2 id="preguntaDos">Cual es la pregunta?</h2>
+          <p>tema numero uno</p>
+        </div>
+
+        <div class="respuestas" id="respuestasTemaNumeroUno">
+          <input
+            type="button"
+            id="r1p3"
+            class="botones tema1"
+            value="puede ser esta"
+            data-puntos="1"
+          />
+          <input
+            type="button"
+            id="r2p3"
+            class="botones tema1"
+            value="o esta"
+            data-puntos="1"
+          />
+          <input
+            type="button"
+            id="r3p3"
+            class="botones tema1"
+            value="tal vez"
+            data-puntos="1"
+          />
+        </div>
+      </div>
+      <!--Este es el cierre del tema uno-->
+
+      <!--Pantalla resultado de puntos -->
+      <div class="hidden" id="pantallaFinal">
+        <h3>Mira cuantos puntos tienes</h3>
+        <p id="puntos"></p>
+        <input
+          type="button"
+          id="regresarPantallaTemas"
+          onclick="regresarTemas()"
+          class="botones"
+          value="Volver a jugar"
+        />
+
+        <div id="respuestas"></div>
+      </div>
+
+      <!--pregunta uno, tema dos-->
+
+      <div class="hidden respuestas__layout" id="pantallaPreguntaUnoTemaDos">
+        <div>
+          <h2 id="preguntaUno">Cual es</h2>
+          <p>tema numero dos</p>
+        </div>
+
+        <div class="respuestas" id="respuestasTemaNumeroUno">
+          <input
+            type="button"
+            id="r1p1"
+            class="botones tema2"
+            value="Bottle Rocket"
+            data-puntos="1"
+          />
+          <input
+            type="button"
+            id="r2p1"
+            xfx
+            class="botones tema2"
+            value="Fantastic Mr. Fox"
+            data-puntos="1"
+          />
+          <input
+            type="button"
+            id="r3p1"
+            class="botones tema2"
+            value="Isla de Perros"
+            data-puntos="1"
+          />
+        </div>
+      </div>
+      <!-- pregunta dos, tema dos-->
+
+      <div class="hidden respuestas__layout" id="pantallaPreguntaDosTemaDos">
+        <div>
+          <h2 id="preguntaDos">Que es lo siguiente?</h2>
+          <p>tema numero uno</p>
+        </div>
+
+        <div class="respuestas" id="respuestasTemaNumeroUno">
+          <input
+            type="button"
+            id="r1p2"
+            class="botones tema2"
+            value="hola"
+            data-puntos="1"
+          />
+          <input
+            type="button"
+            id="r2p2"
+            class="botones tema2"
+            value="que"
+            data-puntos="1"
+          />
+          <input
+            type="button"
+            id="r3p2"
+            class="botones tema2"
+            value="tal"
+            data-puntos="1"
+          />
+        </div>
+      </div>
+      <!--pregunta tres, tema dos -->
+      <div class="hidden respuestas__layout" id="pantallaPreguntaTresTemaDos">
+        <div>
+          <h2 id="preguntaDos">Cual es la pregunta?</h2>
+          <p>tema numero</p>
+        </div>
+
+        <div class="respuestas" id="respuestasTemaNumeroUno">
+          <input
+            type="button"
+            id="r1p3"
+            class="botones tema2"
+            value="puede ser esta"
+            data-puntos="1"
+          />
+          <input
+            type="button"
+            id="r2p3"
+            class="botones tema2"
+            value="o esta"
+            data-puntos="1"
+          />
+          <input
+            type="button"
+            id="r3p3"
+            class="botones tema2"
+            value="tal vez"
+            data-puntos="1"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="trivia.js"></script>
+  </body>
+</html>
